@@ -60,25 +60,20 @@
 
  ;; Examples using `httpie`
 
- ;; ❯ http --verbose :8080 msg=world
- ;; POST / HTTP/1.1
- ;; Accept: application/json, */*;q=0.5
+ ;; ❯ http --verbose :8080 msg==world
+ ;; GET /?msg=world HTTP/1.1
+ ;; Accept: */*
  ;; Accept-Encoding: gzip, deflate
  ;; Connection: keep-alive
- ;; Content-Length: 16
- ;; Content-Type: application/json
  ;; Host: localhost:8080
  ;; User-Agent: HTTPie/2.4.0
  ;;
- ;; {
- ;;     "msg": "world"
- ;; }
  ;;
  ;;
- ;; HTTP/1.1 201 Created
+ ;; HTTP/1.1 200 OK
  ;; Content-Length: 30
  ;; Content-Type: application/json;charset=utf-8
- ;; Date: Tue, 25 May 2021 12:36:32 GMT
+ ;; Date: Tue, 25 May 2021 12:43:14 GMT
  ;; Server: Jetty(9.4.40.v20210413)
  ;;
  ;; {
